@@ -35,7 +35,7 @@ select:focus {
 }
 
 .flex-btn {
-    @apply flex flex-col justify-between items-center;
+    @apply flex justify-between items-center;
 }
 
 .transitions {

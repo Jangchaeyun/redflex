@@ -1,13 +1,17 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import AboutsUs from './Screens/AboutUs';
+import HomeScreen from './Screens/HomeScreen';
+import NotFound from './Screens/NotFound';
 
 function App() {
+
   return (
-    <div className='h-header bg-main w-full'>
-      <h1 className='text-h1 text-star font-bold underline'>
-        Hello
-      </h1>
-      <p className="text-white">loem</p>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomeScreen />} />
+      <Route path="/about-us" element={<AboutsUs />} />
+      <Route path="/*" element={<NotFound />} />
+    </Routes>
   );
 }
 

@@ -1,11 +1,11 @@
 import React from 'react'
 
-function NotFound() {
+function AboutUs() {
   return (
     <div>
-      NotFound
+      AboutUs
     </div>
   )
 }
 
-export default NotFound
+export default AboutUs
