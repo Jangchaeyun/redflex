@@ -2,6 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import AboutsUs from './Screens/AboutUs';
 import ContactUs from './Screens/ContactUs';
+import Profile from './Screens/Dashboard/Profile';
 import HomeScreen from './Screens/HomeScreen';
 import Login from './Screens/Login';
 import NotFound from './Screens/NotFound';
@@ -22,6 +23,7 @@ function App() {
       <Route path="/watch/:id" element={<WatchPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );
