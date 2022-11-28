@@ -45,7 +45,7 @@ export const CategoriesData = [
   },
   {
     _id: '12',
-    title: '역사',
+    title: '시대물',
   },
   {
     _id: '13',

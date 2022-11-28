@@ -7,7 +7,7 @@ function Video({movie}) {
     <>
         <div className='border border-border p-1 hover:scale-95 transitions relative rounded overflow-hidden'>
             <Link 
-                to={`/movies/${movie.name}`}
+                to={`/video/${movie?.name}`}
                 className="w-full"
             >
                 <img
