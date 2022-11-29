@@ -60,7 +60,7 @@ const Rows = (movie, i, admin) => {
 function Table({ data, admin }) {
   return (
     <div className='overflow-x-scroll overflow-hidden relative w-full'>
-      <table className='w-full table-auto border-border divide-y divide-border'>
+      <table className='w-full table-auto border border-border divide-y divide-border'>
         <thead>
           <tr className='bg-dryGray'>
             <th scope='col' className={`${Head}`}>

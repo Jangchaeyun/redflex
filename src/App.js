@@ -3,6 +3,8 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import AboutsUs from './Screens/AboutUs';
 import ContactUs from './Screens/ContactUs';
+import Dashboard from './Screens/Dashboard/Admin/Dashboard';
+import VideosList from './Screens/Dashboard/Admin/VideoList';
 import FavoriteVideos from './Screens/Dashboard/FavoriteVideos';
 import Password from './Screens/Dashboard/Password';
 import Profile from './Screens/Dashboard/Profile';
@@ -29,6 +31,8 @@ function App() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/password" element={<Password />} />
       <Route path="/favorites" element={<FavoriteVideos />} />
+      <Route path="/videoslist" element={<VideosList />} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );
