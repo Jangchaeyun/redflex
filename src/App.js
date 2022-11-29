@@ -1,3 +1,4 @@
+import Aos from 'aos';
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import AboutsUs from './Screens/AboutUs';
@@ -12,7 +13,7 @@ import VideosPage from './Screens/Videos';
 import WatchPage from './Screens/WatchPage';
 
 function App() {
-
+  Aos.init();
   return (
     <Routes>
       <Route path="/" element={<HomeScreen />} />
