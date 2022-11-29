@@ -14,7 +14,7 @@ function Uploader() {
     <div className='w-full text-center'>
         <div
             {...getRootProps()} 
-            className='px-6 pt-5 pb-6 border-border border-dashed bg-main rounded-md cursor-pointer'
+            className='px-6 py-8 border-2 border-border border-dashed bg-main rounded-md cursor-pointer'
             >
                 <input {...getInputProps()}/>
                 <span className='mx-auto flex-colo text-subMain text-3xl'>
