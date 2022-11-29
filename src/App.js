@@ -3,6 +3,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import AboutsUs from './Screens/AboutUs';
 import ContactUs from './Screens/ContactUs';
+import Categories from './Screens/Dashboard/Admin/Categories';
 import Dashboard from './Screens/Dashboard/Admin/Dashboard';
 import VideosList from './Screens/Dashboard/Admin/VideoList';
 import FavoriteVideos from './Screens/Dashboard/FavoriteVideos';
@@ -33,6 +34,7 @@ function App() {
       <Route path="/favorites" element={<FavoriteVideos />} />
       <Route path="/videoslist" element={<VideosList />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/categories" element={<Categories />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );
