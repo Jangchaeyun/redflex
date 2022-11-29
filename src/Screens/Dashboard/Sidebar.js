@@ -7,7 +7,7 @@ import { FiSettings } from "react-icons/fi"
 import Layout from '../../Layout/Layout'
 import { NavLink } from 'react-router-dom'
 
-function Sidebar({children}) {
+function SideBar({children}) {
     const SideLinks = [
         {
             name: "대시보드",
@@ -86,4 +86,4 @@ function Sidebar({children}) {
   )
 }
 
-export default Sidebar
+export default SideBar

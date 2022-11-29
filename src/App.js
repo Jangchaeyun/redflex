@@ -3,6 +3,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import AboutsUs from './Screens/AboutUs';
 import ContactUs from './Screens/ContactUs';
+import Password from './Screens/Dashboard/Password';
 import Profile from './Screens/Dashboard/Profile';
 import HomeScreen from './Screens/HomeScreen';
 import Login from './Screens/Login';
@@ -25,6 +26,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/password" element={<Password />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );
