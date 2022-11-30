@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import MovieCasts from '../Components/Single/MovieCasts'
 import MovieInfo from '../Components/Single/MovieInfo'
@@ -8,8 +8,10 @@ import { Videos } from '../Data/VideosData'
 import Layout from '../Layout/Layout'
 import { BsCollectionFill } from "react-icons/bs";
 import Video from '../Components/Video'
+import ShareMovieModal from '../Components/Modals/ShareModal'
 
 function SingleVideo() {
+    const [modalOpen, setModalOpen] = useState(false);
     const {id} = useParams()
     const movie = Videos.find((movie) => movie.name === id)
     const RelatedMovies = Videos.filter(
@@ -17,7 +19,12 @@ function SingleVideo() {
     );
   return (
     <Layout>
-        <MovieInfo movie={movie} />
+        <ShareMovieModal 
+          modalOpen={modalOpen}
+          setModalOpen={setModalOpen}
+          movie={movie}
+        />
+        <MovieInfo movie={movie} setModalOpen={setModalOpen} />
         <div className='container mx-auto min-h-screen px-2 my-6'>
             <MovieCasts />
             {/* rate */}

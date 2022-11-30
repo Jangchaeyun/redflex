@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Uploader from '../../../Components/Uploader'
 import { Input, Message, Select } from '../../../Components/UsedInputs'
 import { CategoriesData } from '../../../Data/CategoriesData'
@@ -7,10 +7,20 @@ import SideBar from '../SideBar'
 import { MdDelete } from 'react-icons/md'
 import { FaEdit } from 'react-icons/fa'
 import { ImUpload } from 'react-icons/im'
+import CastsModal from '../../../Components/Modals/CastsModal'
 
 function AddVideo() {
+    const [modalOpen, setModalOpen] = useState(false);
+    const [cast, setCast] = useState(null);
+
+    useEffect(() => {
+        if(modalOpen === false) {
+            setCast();
+        }
+    }, [modalOpen])
   return (
       <SideBar>
+        <CastsModal modalOpen={modalOpen} setModalOpen={setModalOpen} cast={cast} />
         <div className='flex flex-col gap-6'>
           <h2 className='text-xl font-bold'>비디오 추가</h2>
           <div className='w-full grid md:grid-cols-2 gap-6'>
@@ -90,7 +100,10 @@ function AddVideo() {
         </div>
           {/* CASTS */}
           <div className='w-full grid lg:grid-cols-2 gap-6 items-start'>
-            <button className='w-full py-4 bg-main border border-subMain border-dashed text-white rounded'>
+            <button
+                onClick={() => setModalOpen(true)} 
+                className='w-full py-4 bg-main border border-subMain border-dashed text-white rounded'
+            >
                 주인공 추가
             </button>
             <div className='grid 2xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-4 grid-cols-2 gap-4'>
@@ -110,7 +123,12 @@ function AddVideo() {
                                 <button className='w-6 h-6 flex-colo bg-dry border border-border text-subMain rounded'>
                                     <MdDelete />
                                 </button>
-                                <button className='w-6 h-6 flex-colo bg-dry border border-border text-green-600 rounded'>
+                                <button 
+                                    onClick={() =>{
+                                        setCast(user);
+                                        setModalOpen(true)}
+                                    }
+                                    className='w-6 h-6 flex-colo bg-dry border border-border text-green-600 rounded'>
                                     <FaEdit />
                                 </button>
                             </div>
