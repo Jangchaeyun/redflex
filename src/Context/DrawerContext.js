@@ -5,7 +5,7 @@ export const SidebarContext = createContext();
 
 function DrawerContext({ children }) {
   const [mobileDrawer, setMobileDrawer] = useState(false);
-  const toggleDrawer = () => setMobileDrawer(!mobileDrawer);
+  const toggleDrawer = () => setMobileDrawer(mobileDrawer);
   const value = useMemo(() => ({ mobileDrawer, toggleDrawer }), [mobileDrawer, toggleDrawer]);
   return (
     <SidebarContext.Provider value={value}>{children}</SidebarContext.Provider>
