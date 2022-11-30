@@ -1,5 +1,6 @@
 import React from 'react'
 import Footer from './Footer/Footer'
+import MobileFooter from './Footer/MobileFooter'
 import NavBar from './Navbar/NavBar'
 
 function Layout({children}) {
@@ -9,6 +10,8 @@ function Layout({children}) {
             <NavBar/>
             {children}
             <Footer />
+            {/* mobile footer */}
+            <MobileFooter />
         </div>
     </>
   )

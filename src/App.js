@@ -1,6 +1,7 @@
 import Aos from 'aos';
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
+import ScrollOnTop from './ScrollOnTop';
 import AboutsUs from './Screens/AboutUs';
 import ContactUs from './Screens/ContactUs';
 import AddVideo from './Screens/Dashboard/Admin/AddVideo';
@@ -22,25 +23,27 @@ import WatchPage from './Screens/WatchPage';
 function App() {
   Aos.init();
   return (
-    <Routes>
-      <Route path="/" element={<HomeScreen />} />
-      <Route path="/about-us" element={<AboutsUs />} />
-      <Route path="/contact-us" element={<ContactUs />} />
-      <Route path="/videos" element={<VideosPage />} />
-      <Route path="/video/:id" element={<SingleVideo />} />
-      <Route path="/watch/:id" element={<WatchPage />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/password" element={<Password />} />
-      <Route path="/favorites" element={<FavoriteVideos />} />
-      <Route path="/videoslist" element={<VideosList />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/categories" element={<Categories />} />
-      <Route path="/users" element={<Users />} />
-      <Route path="/addvideo" element={<AddVideo />} />
-      <Route path="/*" element={<NotFound />} />
-    </Routes>
+    <ScrollOnTop>
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/about-us" element={<AboutsUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/videos" element={<VideosPage />} />
+        <Route path="/video/:id" element={<SingleVideo />} />
+        <Route path="/watch/:id" element={<WatchPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/password" element={<Password />} />
+        <Route path="/favorites" element={<FavoriteVideos />} />
+        <Route path="/videoslist" element={<VideosList />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/addvideo" element={<AddVideo />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
+    </ScrollOnTop>
   );
 }
 
